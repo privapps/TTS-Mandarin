@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: privapps/TTS-Mandarin@main
+        with:
+          text: '雄起'
+          voice: '18'
+          content: 'out.mp3'
+      - run: ls -l 

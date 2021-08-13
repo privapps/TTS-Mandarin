@@ -1,0 +1,23 @@
+# action.yml
+name: 'TTS-Mandarin'
+description: 'Generate Mandarin Speech From Text'
+inputs:
+  text:  # id of input
+    description: 'What text?'
+    required: true
+    default: 'World'
+  voice:  # id of input
+    description: 'What Voice'
+    required: false
+    default: '22'
+  content: # id of output
+    required: false
+    description: 'path that wave binary save to'
+    default: './__out__.mp3'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'speaker'
+  color: 'red' 
+  
